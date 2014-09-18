@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/ev1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card_no_border" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ev2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card_no_border" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ev3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card_no_border" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ev4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card_no_border" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ev5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card_no_border" >
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
