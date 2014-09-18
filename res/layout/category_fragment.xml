@@ -6,6 +6,7 @@
     android:orientation="vertical" >
 
     <LinearLayout
+        android:id="@+id/LL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
@@ -16,6 +17,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:background="@drawable/card_no_border" >
+
+            <Button
+                android:id="@+id/ev1b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_click"
+                android:textColor="@color/black"
+                android:visibility="gone" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -24,6 +34,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:background="@drawable/card_no_border" >
+
+            <Button
+                android:id="@+id/ev2b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_click"
+                android:textColor="@color/black"
+                android:visibility="gone" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -32,6 +51,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:background="@drawable/card_no_border" >
+
+            <Button
+                android:id="@+id/ev3b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_click"
+                android:textColor="@color/black"
+                android:visibility="gone" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -40,6 +68,14 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:background="@drawable/card_no_border" >
+
+            <Button
+                android:id="@+id/ev4b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_click"
+                android:visibility="gone" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -48,6 +84,14 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:background="@drawable/card_no_border" >
+
+            <Button
+                android:id="@+id/ev5b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_click"
+                android:visibility="gone" />
         </RelativeLayout>
     </LinearLayout>
 

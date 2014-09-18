@@ -15,10 +15,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import chipset.techtatva.fragment.EventFragment;
+import chipset.techtatva.fragments.HomeFragment;
 import chipset.techtatva.resources.DrawerAdapter;
 import chipset.techtatva.resources.DrawerItem;
-import chipset.techtatva.R;
 
 public class MainActivity extends Activity {
 	DrawerLayout mDrawerLayout;
@@ -31,7 +30,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		if (savedInstanceState == null) {
-			Fragment fragment = new EventFragment();
+			Fragment fragment = new HomeFragment();
 			FragmentManager fragmentManager = getFragmentManager();
 			fragmentManager.beginTransaction()
 					.replace(R.id.container, fragment).commit();

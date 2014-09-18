@@ -1,4 +1,4 @@
-package chipset.techtatva.fragment;
+package chipset.techtatva.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
