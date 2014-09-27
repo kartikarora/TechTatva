@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <color name="clouds">#ecf0f1</color>
     <color name="black">#000000</color>
     <color name="silver">#bdc3c7</color>
+    <color name="techtatva">#003340</color>
+    <color name="red_light">#ffff4444</color>
+    <color name="green_light">#ff99cc00</color>
+    <color name="purple">#ffaa66cc</color>
+    <color name="blue_light">#ff33b5e5</color>
+    <color name="sorte">#ddd</color>
 
 </resources>

@@ -9,11 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:paddingBottom="15dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingTop="15dp"
-        tools:ignore="UselessParent" >
+        android:padding="10dp" >
 
         <ImageView
             android:id="@+id/icon"
@@ -29,7 +25,7 @@
             android:layout_weight="0.7"
             android:contentDescription="@string/app_name"
             android:gravity="center_vertical"
-            android:textColor="#000"
+            android:textColor="@color/techtatva"
             android:textSize="15sp" />
     </LinearLayout>
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_result"
+        android:showAsAction="withText|always"
+        android:title="@string/results"/>
+    <item
+        android:id="@+id/action_dev"
+        android:showAsAction="never"
+        android:title="@string/dev"/>
+    <item
+        android:id="@+id/action_contact"
+        android:showAsAction="never"
+        android:title="@string/contact"/>
+
+</menu>
