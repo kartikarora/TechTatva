@@ -4,55 +4,23 @@
     <string name="app_name">TechTatva\'14</string>
     <string name="drawer_opened">Open</string>
     <string name="drawer_closed">Close</string>
-    <string name="reg">REGISTER</string>
-    <string name="insta">INSTA FEED</string>
-    <string name="events">EVENTS</string>
-    <string name="results">Results</string>
-    <string name="contact">Contact Us</string>
-    <string name="dev">Developers</string>
-    <string name="zero">0</string>
-    <string name="nc">Oops!\nNo internet connection!</string>
 
+    
     <string-array name="cat">
-        <item>Snapshot</item>
         <item>Accumen</item>
-        <item>Airborne</item>
-        <item>Bizzmaestro</item>
+		<item>Airborne</item>
+		<item>Bizzmaestro</item>
         <item>Cheminova</item>
-        <item>Constructure</item>
-        <item>Cryptoss</item>
+		<item>Constructure</item>
+		<item>Cryptoss</item>
         <item>Electrific</item>
-        <item>Energia</item>
-        <item>Epsilon</item>
+		<item>Energia</item>
+		<item>Epsilon</item>
         <item>Gizmo</item>
-        <item>Kraftwagen</item>
-        <item>Mechanize</item>
+		<item>Kraftwagen</item>
+		<item>Mechanize</item>
         <item>Mechatron</item>
-        <item>Robotrek</item>
-        <item>Turing</item>
+		<item>Robotrek</item>
+		<item>Turing</item>
     </string-array>
-
-    <string name="title_activity_splash">Splash</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_home">Home</string>
-    <string name="title_activity_insta_feed">#techtatva14</string>
-    <string name="title_activity_web_view">Register</string>
-    <string name="title_activity_developer">Developers</string>
-    <string name="title_activity_result">Results</string>
-    <string name="team_leader">Team Lead</string>
-    <string name="tanay_agarwal">Tanay Agrawal</string>
-    <string name="samrth_jain">Samarth Jain</string>
-    <string name="ui_ux_graphic_designer">UI/UX &amp; Designer</string>
-    <string name="amrit_ayyar">Amrit Ayyar</string>
-    <string name="backend_developer">Backend Developer</string>
-    <string name="vidya_sagar">Vidya Sagar</string>
-    <string name="animation_videofx">Animation &amp; VideoFX</string>
-    <string name="shubham_sorte">Shubham Sorte</string>
-    <string name="ios_app_developer">iOS Developer</string>
-    <string name="kartik_arora">Kartik Arora</string>
-    <string name="android_app_developer">Android Developer</string>
-    <string name="saksham_khanna">Saksham Khanna</string>
-    <string name="windows_phone_app_developer">Windows Developer</string>
-    <string name="live_blog">LIVE BLOG</string>
-
 </resources>

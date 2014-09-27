@@ -1,17 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sorte"
-    android:padding="@dimen/activity_horizontal_margin" >
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
 
-    <ListView
-        android:id="@+id/eventList"
+    <LinearLayout
+        android:id="@+id/LL"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="@dimen/activity_horizontal_margin" >
-    </ListView>
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
-</RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ev1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card_no_border" >
+
+            <Button
+                android:id="@+id/ev1b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_click"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ev2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card_no_border" >
+
+            <Button
+                android:id="@+id/ev2b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_click"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ev3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card_no_border" >
+
+            <Button
+                android:id="@+id/ev3b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_click"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ev4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card_no_border" >
+
+            <Button
+                android:id="@+id/ev4b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_click"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ev5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/card_no_border" >
+
+            <Button
+                android:id="@+id/ev5b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_click"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
