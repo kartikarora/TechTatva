@@ -1,6 +1,6 @@
 package chipset.techtatva;
 
-import static chipset.techtatva.resources.Constants.PREF_CAT;
+import static chipset.techtatva.resources.Constants.*;
 import static chipset.techtatva.resources.Constants.PREF_FR;
 import static chipset.techtatva.resources.Constants.PREF_JSON;
 import static chipset.techtatva.resources.Constants.URL_EVENTS;
@@ -93,7 +93,7 @@ public class MainActivity extends FragmentActivity implements
 
 		final String[] cat = getResources().getStringArray(R.array.cat);
 		dataList = new ArrayList<DrawerItem>();
-		dataList.add(new DrawerItem(cat[0], R.drawable.android4));
+		dataList.add(new DrawerItem(cat[0], R.drawable.android4b));
 		dataList.add(new DrawerItem(cat[1], R.drawable.acumen2));
 		dataList.add(new DrawerItem(cat[2], R.drawable.airborne2));
 		dataList.add(new DrawerItem(cat[3], R.drawable.bizzmaestro2));
@@ -109,6 +109,12 @@ public class MainActivity extends FragmentActivity implements
 		dataList.add(new DrawerItem(cat[13], R.drawable.mechatron2));
 		dataList.add(new DrawerItem(cat[14], R.drawable.robotrek2));
 		dataList.add(new DrawerItem(cat[15], R.drawable.turing2));
+		dataList.add(new DrawerItem(cat[16], R.drawable.turing2));
+		dataList.add(new DrawerItem(cat[17], R.drawable.turing2));
+		dataList.add(new DrawerItem(cat[18], R.drawable.turing2));
+		dataList.add(new DrawerItem(cat[19], R.drawable.turing2));
+		dataList.add(new DrawerItem(cat[20], R.drawable.turing2));
+		dataList.add(new DrawerItem(cat[21], R.drawable.turing2));
 
 		mDrawerList.setAdapter(new DrawerAdapter(MainActivity.this,
 				R.layout.drawer_item, dataList));
@@ -140,6 +146,9 @@ public class MainActivity extends FragmentActivity implements
 				functions.putSharedPrefrences(getApplicationContext(),
 						PREF_CAT, arg2);
 				mDrawerLayout.closeDrawer(mDrawerList);
+				mAdapter.getItem(functions.getSharedPrefrencesInt(
+						getApplicationContext(), PREF_DAY));
+				mAdapter.notifyDataSetChanged();
 
 			}
 		});

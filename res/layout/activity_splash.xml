@@ -10,4 +10,12 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true" />
 
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/splash" />
+
 </RelativeLayout>

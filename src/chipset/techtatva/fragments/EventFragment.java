@@ -85,6 +85,7 @@ public class EventFragment extends Fragment {
 				JSONObject jObj = jArr.getJSONObject(i);
 				date = jObj.getString(EVENT_DATE);
 				if (date.startsWith(x)) {
+					String[] cats = getResources().getStringArray(R.array.cat);
 					HashMap<String, String> map = new HashMap<String, String>();
 					cat = jObj.getString(EVENT_CATEGORY);
 					name = jObj.getString(EVENT_NAME);
@@ -93,14 +94,25 @@ public class EventFragment extends Fragment {
 					time = jObj.getString(EVENT_TIME);
 					cont = jObj.getString(EVENT_CONTACT);
 
-					map.put(EVENT_CATEGORY, cat);
-					map.put(EVENT_NAME, name);
-					map.put(EVENT_DETAIL, detail);
-					map.put(EVENT_LOCATION, location);
-					map.put(EVENT_TIME, time);
-					map.put(EVENT_DATE, date);
-					map.put(EVENT_CONTACT, cont);
-					eventData.add(map);
+					if (categ == 0) {
+						map.put(EVENT_CATEGORY, cat);
+						map.put(EVENT_NAME, name);
+						map.put(EVENT_DETAIL, detail);
+						map.put(EVENT_LOCATION, location);
+						map.put(EVENT_TIME, time);
+						map.put(EVENT_DATE, date);
+						map.put(EVENT_CONTACT, cont);
+						eventData.add(map);
+					} else if (cat.equals(cats[categ])) {
+						map.put(EVENT_CATEGORY, cat);
+						map.put(EVENT_NAME, name);
+						map.put(EVENT_DETAIL, detail);
+						map.put(EVENT_LOCATION, location);
+						map.put(EVENT_TIME, time);
+						map.put(EVENT_DATE, date);
+						map.put(EVENT_CONTACT, cont);
+						eventData.add(map);
+					}
 				}
 
 			}

@@ -35,6 +35,7 @@ public class Constants {
 	
 	public static String PREF_JSON = "jsonarray";
 	public static String PREF_CAT = "categoryno";
+	public static String PREF_DAY = "day";
 	public static String PREF_FR = "first_run";
 
 }
