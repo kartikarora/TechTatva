@@ -3,9 +3,9 @@
     <string name="app_name">TechTatva\'14</string>
     <string name="drawer_opened">Open</string>
     <string name="drawer_closed">Close</string>
-    <string name="reg">REGISTER</string>
-    <string name="insta">INSTA FEED</string>
-    <string name="events">EVENTS</string>
+    <string name="reg">Register</string>
+    <string name="insta">Insta Feed</string>
+    <string name="events">Events</string>
     <string name="results">Results</string>
     <string name="contact">Contact Us</string>
     <string name="dev">Developers</string>
@@ -15,7 +15,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_home">Home</string>
     <string name="title_activity_insta_feed">#techtatva14</string>
-    <string name="title_activity_web_view">Register</string>
+    <string name="title_activity_web_view">WebView</string>
     <string name="title_activity_developer">Developers</string>
     <string name="title_activity_result">Results</string>
     <string name="team_leader">Team Lead</string>
@@ -32,7 +32,8 @@
     <string name="android_app_developer">Android Developer</string>
     <string name="saksham_khanna">Saksham Khanna</string>
     <string name="windows_phone_app_developer">Windows Developer</string>
-    <string name="live_blog">LIVE BLOG</string>
+    <string name="live_blog">Live Blog</string>
+    <string name="contactus">Convener\n\tJal Panchal\n\tEmail: convener@techtatva.in\n\tPhone: +919740981697\n\nConvener\n\tAparna Sandhu\n\tEmail: convener@techtatva.in\n\tPhone: +918123677470</string>
 
     <string-array name="cat">
         <item>Snapshot</item>

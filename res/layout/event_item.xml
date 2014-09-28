@@ -13,6 +13,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
+        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
@@ -26,7 +27,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
         android:drawableLeft="@drawable/ic_location"
-        android:gravity="center" />
+        android:gravity="left|center_vertical" />
 
     <TextView
         android:id="@+id/eventTime"
@@ -38,7 +39,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
         android:drawableLeft="@drawable/ic_time"
-        android:gravity="center" />
+        android:gravity="left|center_vertical" />
 
     <TextView
         android:id="@+id/eventDate"
@@ -50,7 +51,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
         android:drawableLeft="@drawable/ic_date"
-        android:gravity="center" />
+        android:gravity="left|center_vertical" />
 
     <TextView
         android:id="@+id/eventContact"
@@ -62,6 +63,6 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
         android:drawableLeft="@drawable/ic_contact"
-        android:gravity="center" />
+        android:gravity="left|center_vertical" />
 
 </RelativeLayout>

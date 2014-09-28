@@ -9,17 +9,17 @@ import android.os.Bundle;
 import android.widget.VideoView;
 
 public class SplashActivity extends Activity {
+	VideoView splashVideo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
-		VideoView splashVideo = (VideoView) findViewById(R.id.splash);
+		splashVideo = (VideoView) findViewById(R.id.splash);
 		Uri uri = Uri.parse("android.resource://" + getPackageName() + "/"
 				+ R.raw.techtatva);
 
 		splashVideo.setVideoURI(uri);
-		splashVideo.start();
 		splashVideo.setOnCompletionListener(new OnCompletionListener() {
 
 			@Override
@@ -30,5 +30,17 @@ public class SplashActivity extends Activity {
 
 			}
 		});
+	}
+
+	@Override
+	protected void onPause() {
+		splashVideo.suspend();
+		super.onPause();
+	}
+
+	@Override
+	protected void onResume() {
+		splashVideo.start();
+		super.onResume();
 	}
 }

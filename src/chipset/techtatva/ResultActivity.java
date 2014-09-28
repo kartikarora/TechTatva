@@ -34,7 +34,7 @@ public class ResultActivity extends Activity {
 			AlertDialog.Builder dialog = new AlertDialog.Builder(
 					ResultActivity.this);
 			dialog.setTitle("Contact Us");
-			dialog.setMessage("Convener\n\tJal Panchal\n\tEmail: convener@techtatva.in\n\tPhone: +919740981697\n\nConvener\n\tAparna Sandhu\n\tEmail: convener@techtatva.in\n\tPhone: +918123677470");
+			dialog.setMessage(getResources().getString(R.string.contactus));
 			dialog.setCancelable(false);
 			dialog.setNeutralButton(android.R.string.ok, null);
 			dialog.create();

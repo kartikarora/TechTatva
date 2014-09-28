@@ -41,7 +41,7 @@ public class Functions {
 	 */
 	public Typeface getTypeface(Context context) {
 		Typeface tf = Typeface.createFromAsset(context.getAssets(),
-				"fonts/sm.ttf");
+				"fonts/mr.ttf");
 		return tf;
 	}
 

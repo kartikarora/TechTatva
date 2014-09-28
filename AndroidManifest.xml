@@ -35,27 +35,27 @@
         </activity>
         <activity
             android:name=".HomeActivity"
-            android:label="@string/app_name"
+            android:label="@string/title_activity_home"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".WebViewActivity"
-            android:label="@string/app_name"
+            android:label="@string/title_activity_web_view"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".ResultActivity"
-            android:label="@string/app_name"
+            android:label="@string/title_activity_result"
             android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name=".DeveloperActivity"
-            android:label="@string/app_name"
+            android:label="@string/title_activity_developer"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".InstaFeedActivity"
-            android:label="@string/app_name"
+            android:label="@string/title_activity_insta_feed"
             android:screenOrientation="portrait" >
         </activity>
     </application>

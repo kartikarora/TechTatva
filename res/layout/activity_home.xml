@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black" >
+    android:background="@drawable/background" >
 
     <ImageView
         android:id="@+id/logobig"
@@ -24,7 +24,8 @@
         android:gravity="center"
         android:padding="15dp"
         android:text="@string/reg"
-        android:textColor="@color/clouds" />
+        android:textColor="@color/clouds"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/eventButton"
@@ -37,7 +38,8 @@
         android:gravity="center"
         android:padding="15dp"
         android:text="@string/events"
-        android:textColor="@color/clouds" />
+        android:textColor="@color/clouds"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/instaFeedButton"
@@ -50,7 +52,8 @@
         android:gravity="center"
         android:padding="15dp"
         android:text="@string/insta"
-        android:textColor="@color/clouds" />
+        android:textColor="@color/clouds"
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/liveBlogButton"
@@ -62,6 +65,7 @@
         android:gravity="center"
         android:padding="15dp"
         android:text="@string/live_blog"
-        android:textColor="@color/clouds" />
+        android:textColor="@color/clouds"
+        android:textSize="25sp" />
 
 </RelativeLayout>

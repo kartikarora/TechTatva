@@ -7,7 +7,7 @@ import static chipset.techtatva.resources.Constants.EVENT_DETAIL;
 import static chipset.techtatva.resources.Constants.EVENT_LOCATION;
 import static chipset.techtatva.resources.Constants.EVENT_NAME;
 import static chipset.techtatva.resources.Constants.EVENT_TIME;
-import static chipset.techtatva.resources.Constants.PREF_JSON;
+import static chipset.techtatva.resources.Constants.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,12 +29,19 @@ import chipset.techtatva.R;
 import chipset.techtatva.resources.EventAdapter;
 import chipset.techtatva.resources.Functions;
 
-public class EventFragmentOne extends Fragment {
+public class EventFragment extends Fragment {
 
 	JSONArray jArr = null;
 	Functions functions = new Functions();
 	ArrayList<HashMap<String, String>> eventData = new ArrayList<HashMap<String, String>>();
-	String cat, name, detail, location, time, date, cont;
+	String cat, name, detail, location, time, date, cont, x;
+	int categ;
+	int day;
+
+	public EventFragment(int c, int d) {
+		categ = c;
+		day = d;
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,15 +57,34 @@ public class EventFragmentOne extends Fragment {
 		ListView eventList = (ListView) view.findViewById(R.id.eventList);
 		String getData = functions.getSharedPrefrencesString(getActivity(),
 				PREF_JSON);
+		switch (day) {
+		case 0: {
+			x = "8";
+			break;
+		}
+		case 1: {
+			x = "9";
+			break;
+		}
+		case 2: {
+			x = "10";
+			break;
+		}
+		case 3: {
+			x = "11";
+			break;
+		}
+		}
 
 		try {
+
 			jArr = new JSONArray(getData);
 			Log.e("jArr", String.valueOf(jArr));
 			for (int i = 0; i < jArr.length(); i++) {
 
 				JSONObject jObj = jArr.getJSONObject(i);
 				date = jObj.getString(EVENT_DATE);
-				if (date.startsWith("8")) {
+				if (date.startsWith(x)) {
 					HashMap<String, String> map = new HashMap<String, String>();
 					cat = jObj.getString(EVENT_CATEGORY);
 					name = jObj.getString(EVENT_NAME);
@@ -66,6 +92,7 @@ public class EventFragmentOne extends Fragment {
 					location = jObj.getString(EVENT_LOCATION);
 					time = jObj.getString(EVENT_TIME);
 					cont = jObj.getString(EVENT_CONTACT);
+
 					map.put(EVENT_CATEGORY, cat);
 					map.put(EVENT_NAME, name);
 					map.put(EVENT_DETAIL, detail);
@@ -78,7 +105,6 @@ public class EventFragmentOne extends Fragment {
 
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -103,7 +129,9 @@ public class EventFragmentOne extends Fragment {
 
 		});
 
-	}@Override
+	}
+
+	@Override
 	public void onDetach() {
 		eventData.clear();
 		super.onDetach();
