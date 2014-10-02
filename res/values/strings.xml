@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">TechTatva\'14</string>
@@ -32,8 +33,9 @@
     <string name="android_app_developer">Android Developer</string>
     <string name="saksham_khanna">Saksham Khanna</string>
     <string name="windows_phone_app_developer">Windows Developer</string>
-    <string name="live_blog">Live Blog</string>
+    <string name="live_blog">Blog</string>
     <string name="contactus">Convener\n\tJal Panchal\n\tEmail: convener@techtatva.in\n\tPhone: +919740981697\n\nConvener\n\tAparna Sandhu\n\tEmail: convener@techtatva.in\n\tPhone: +918123677470</string>
+    <string name="title_activity_featured_events">Featured Events</string>
 
     <string-array name="cat">
         <item>Snapshot</item>
@@ -52,12 +54,36 @@
         <item>Mechatron</item>
         <item>Robotrek</item>
         <item>Turing</item>
+    </string-array>
+    <string-array name="fe1">
         <item>Vedant 4.0</item>
+        <item></item>
+        <item>Yet again, continuing with our efforts we present to you VEDANTH 4.0 - an even bigger endeavour, with more challenging projects and a larger portfolio of events. With a host of other extravaganzas, VEDANTH 4.0 will show you what the next-level of Robotics is! This time, we thrive to present to you the most cutting-edge projects. Come, get enthralled!\n\nContact Details\nName :Kishore Khed\nPhone: +919740573056</item>
+    </string-array>
+    <string-array name="fe2">
         <item>Paper Presentation</item>
-        <item>The Manipal Conclave</item>
-        <item>Fuel RC 3</item>
-        <item>Questionable Intelligence</item>
+        <item></item>
+        <item>TechTatva \'14 invites the bright minds across this nation to present their ground breaking ideas and take part in the Technical Paper Presentation Competition hosted by MIT, Manipal. Every year around 400 talented individuals from various engineering streams participate and exhibit their ideas in front of our esteemed panel of judges.\n\nContact Details\nName :Srishti\nPhone: +919740588560\nName :Mukul \nPhone: +919481028183</item>
+    </string-array>
+    <string-array name="fe3">
         <item>Robowars</item>
+        <item>This is war, may the force be with you!\n\n</item>
+        <item>It began with the strike of a hammer. The opponent tried to block it but failed. Outside the ring his controlled grappled with the joystick. Trying to bring it back into control. Yet Thor went on, smashing away with the force of a Viking God, blow after blow, bending steel and crushing metal. Thor\'s controller gunned away with fury, this was what it had all been about. Unquestioned victory. But it wasn\'t going to end now, and in a final try for victory the man outside the ring pressed a button, as the air filled with the sounds of whirring blades&#8230; \nThis was War. And only the best Robot would emerge in glory.\n\nContact Details\nName : Disha\nPhone: +919663562870\nName: Karl\nPhone : +919916871049</item>
+    </string-array>
+    <string-array name="fe4">
+        <item>Fuel RC 3</item>
+        <item>Racing is an art. Racing with passion, that’s high art!\n\n</item>
+        <item>A sound only comparable to a Monster Truck Rally that would make Mozart wish he could hear again! Here\'s presenting the third edition of the national level Nitro RC Car championship, Fuel RC3.\n\nThe smell of burning rubber and Nitro ethanol, all swirling out together on race tracks with twisted turns, ramps and obstacles; it’s an opportunity for all racing enthusiasts to participate and witness exhilarating speeds, stunts and guaranteed high adrenaline action!\n\nContact Details\nName : Ranbir Grewal\nPhone: +919008772528\nName: Rohan Maity\nPhone : +919008756610</item>
+    </string-array>
+    <string-array name="fe5">
+        <item>Questionable Intelligence</item>
+        <item></item>
+        <item>A science and technology Quiz designed to test participants\' knowledge relating to the latest developments in Technology along with all things Science. Teams answer a series of questions spread over 2 rounds to be crowned winners.\n\nName :Akhilesh Oberoi\nPhone: +919740446188\nName :Kunal Aggarwal\nPhone: +919740442573</item>
+    </string-array>
+    <string-array name="fe6">
+        <item>The Manipal Conclave</item>
+        <item></item>
+        <item>The Manipal Conclave is MIT\'s initiative to bring together the most brilliant and cutting-edge minds from all disciplines that impact the world today. Spread over the last 2 days of the fest, the Conclave promises to be the absolute platform to get inspired and learn from the best. The Manipal Conclave 2014, our most treasured event this TechTatva, is a direct reflection of our theme \'Integrating Ideas\'.</item>
     </string-array>
 
 </resources>

@@ -12,6 +12,7 @@ import java.util.HashMap;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -83,11 +84,15 @@ public class InstaFeedAdapter extends BaseAdapter {
 				.into(instaImage);
 		Picasso.with(Cont).load(profile_picture)
 				.placeholder(R.drawable.ic_launcher).into(instaUserPic);
-
+		Typeface tf = new Functions().getTypeface(Cont);
+		instaText.setTypeface(tf);
 		instaText.setText(text);
+		instaUsername.setTypeface(tf);
 		instaUsername.setText("@" + username);
+		instaLikes.setTypeface(tf);
 		instaLikes.setText(like);
+		instaComments.setTypeface(tf);
 		instaComments.setText(comment);
 		return arg1;
 	}
-}	
+}

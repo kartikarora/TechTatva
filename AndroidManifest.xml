@@ -5,12 +5,13 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -19,6 +20,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".SplashActivity"
+            android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
@@ -29,33 +31,45 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".EventsActivity"
+            android:icon="@drawable/ic_launch"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".HomeActivity"
+            android:icon="@drawable/ic_launch"
             android:label="@string/title_activity_home"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".WebViewActivity"
+            android:icon="@drawable/ic_launch"
             android:label="@string/title_activity_web_view"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".ResultActivity"
+            android:icon="@drawable/ic_launch"
             android:label="@string/title_activity_result"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".DeveloperActivity"
+            android:icon="@drawable/ic_launch"
             android:label="@string/title_activity_developer"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".InstaFeedActivity"
+            android:icon="@drawable/ic_launch"
             android:label="@string/title_activity_insta_feed"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".FeaturedEventsActivity"
+            android:icon="@drawable/ic_launch"
+            android:label="@string/title_activity_featured_events"
             android:screenOrientation="portrait" >
         </activity>
     </application>

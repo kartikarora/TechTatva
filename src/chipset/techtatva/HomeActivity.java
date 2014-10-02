@@ -1,5 +1,6 @@
 package chipset.techtatva;
 
+import static chipset.techtatva.resources.Constants.PREF_JSON;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -28,11 +29,13 @@ public class HomeActivity extends Activity {
 		Button eventsButton = (Button) findViewById(R.id.eventButton);
 		Button instaFeedButton = (Button) findViewById(R.id.instaFeedButton);
 		Button liveBlogButton = (Button) findViewById(R.id.liveBlogButton);
+		Button featuredEventButton = (Button) findViewById(R.id.featuredEventButton);
 		Typeface tf = functions.getTypeface(getApplicationContext());
 		registerButton.setTypeface(tf);
 		eventsButton.setTypeface(tf);
 		instaFeedButton.setTypeface(tf);
 		liveBlogButton.setTypeface(tf);
+		featuredEventButton.setTypeface(tf);
 		registerButton.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -68,7 +71,21 @@ public class HomeActivity extends Activity {
 
 			@Override
 			public void onClick(View arg0) {
-				startActivity(new Intent(HomeActivity.this, MainActivity.class));
+				if (functions.isConnected(getApplicationContext()) == true) {
+					startActivity(new Intent(HomeActivity.this,
+							EventsActivity.class));
+				} else {
+					if (functions.getSharedPrefrencesString(
+							getApplicationContext(), PREF_JSON).equals("null")) {
+						Toast.makeText(getApplicationContext(),
+								"No internet connection", Toast.LENGTH_SHORT)
+								.show();
+					} else {
+						startActivity(new Intent(HomeActivity.this,
+								EventsActivity.class));
+					}
+				}
+
 			}
 		});
 
@@ -84,6 +101,17 @@ public class HomeActivity extends Activity {
 							"No Internet Connection", Toast.LENGTH_SHORT)
 							.show();
 				}
+			}
+		});
+
+		featuredEventButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+
+				startActivity(new Intent(HomeActivity.this,
+						FeaturedEventsActivity.class));
+
 			}
 		});
 

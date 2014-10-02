@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/action_result"
+        android:id="@+id/action_dev"
         android:showAsAction="withText|always"
-        android:title="@string/results"/>
+        android:title="@string/dev"/>
     <item
         android:id="@+id/action_contact"
         android:showAsAction="withText|always"

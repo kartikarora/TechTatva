@@ -21,8 +21,6 @@
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:background="@color/clouds"
         android:divider="@color/sorte"
         android:dividerHeight="2dp" />

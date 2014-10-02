@@ -7,7 +7,7 @@ import static chipset.techtatva.resources.Constants.EVENT_DETAIL;
 import static chipset.techtatva.resources.Constants.EVENT_LOCATION;
 import static chipset.techtatva.resources.Constants.EVENT_NAME;
 import static chipset.techtatva.resources.Constants.EVENT_TIME;
-import static chipset.techtatva.resources.Constants.*;
+import static chipset.techtatva.resources.Constants.PREF_JSON;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,7 +46,7 @@ public class EventFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootview = inflater.inflate(R.layout.category_fragment, container,
+		View rootview = inflater.inflate(R.layout.event_fragment, container,
 				false);
 
 		return rootview;
@@ -55,8 +55,10 @@ public class EventFragment extends Fragment {
 	@Override
 	public void onViewCreated(final View view, Bundle savedInstanceState) {
 		ListView eventList = (ListView) view.findViewById(R.id.eventList);
+
 		String getData = functions.getSharedPrefrencesString(getActivity(),
 				PREF_JSON);
+		Log.i("DATA", getData);
 		switch (day) {
 		case 0: {
 			x = "8";
@@ -140,12 +142,11 @@ public class EventFragment extends Fragment {
 			}
 
 		});
-
 	}
 
-	@Override
-	public void onDetach() {
-		eventData.clear();
-		super.onDetach();
-	}
+	// @Override
+	// public void onDetach() {
+	// eventData.clear();
+	// super.onDetach();
+	// }
 }

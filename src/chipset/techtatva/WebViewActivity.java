@@ -2,6 +2,7 @@ package chipset.techtatva;
 
 import static chipset.techtatva.resources.Constants.URL_BLOG;
 import static chipset.techtatva.resources.Constants.URL_REG;
+import chipset.techtatva.resources.Functions;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 public class WebViewActivity extends Activity {
 	WebView registerView;
@@ -105,6 +107,14 @@ public class WebViewActivity extends Activity {
 			dialog.setNeutralButton(android.R.string.ok, null);
 			dialog.create();
 			dialog.show();
+		} else if (id == R.id.action_result) {
+			if (new Functions().isConnected(getApplicationContext()) == true) {
+				startActivity(new Intent(WebViewActivity.this,
+						ResultActivity.class));
+			} else {
+				Toast.makeText(getApplicationContext(),
+						"No Internet Connection", Toast.LENGTH_SHORT).show();
+			}
 		}
 		return super.onOptionsItemSelected(item);
 	}

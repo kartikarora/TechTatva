@@ -11,6 +11,7 @@ import java.util.HashMap;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,6 @@ import chipset.techtatva.R;
 
 @SuppressLint("InflateParams")
 public class EventAdapter extends BaseAdapter {
-
 	ArrayList<HashMap<String, String>> Data = new ArrayList<HashMap<String, String>>();
 	Context Cont;
 	LayoutInflater inflater;
@@ -56,15 +56,21 @@ public class EventAdapter extends BaseAdapter {
 		}
 		map = Data.get(arg0);
 		TextView name, date, time, contact, location;
+		Typeface tf = new Functions().getTypeface(Cont);
 		name = (TextView) arg1.findViewById(R.id.eventName);
 		date = (TextView) arg1.findViewById(R.id.eventDate);
 		time = (TextView) arg1.findViewById(R.id.eventTime);
 		contact = (TextView) arg1.findViewById(R.id.eventContact);
 		location = (TextView) arg1.findViewById(R.id.eventLocation);
+		name.setTypeface(tf);
 		name.setText((String) map.get(EVENT_NAME));
+		date.setTypeface(tf);
 		date.setText((String) map.get(EVENT_DATE));
+		time.setTypeface(tf);
 		time.setText((String) map.get(EVENT_TIME));
+		contact.setTypeface(tf);
 		contact.setText((String) map.get(EVENT_CONTACT));
+		location.setTypeface(tf);
 		location.setText((String) map.get(EVENT_LOCATION));
 		return arg1;
 	}

@@ -4,6 +4,7 @@ import java.util.List;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,14 +34,13 @@ public class DrawerAdapter extends ArrayAdapter<DrawerItem> {
 
 		DrawerItemHolder drawerHolder;
 		View view = convertView;
-
+		Typeface tf = new Functions().getTypeface(getContext());
 		if (view == null) {
 			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
 			drawerHolder = new DrawerItemHolder();
 
 			view = inflater.inflate(layoutResID, parent, false);
-			drawerHolder.ItemName = (TextView) view
-					.findViewById(R.id.cat);
+			drawerHolder.ItemName = (TextView) view.findViewById(R.id.cat);
 			drawerHolder.icon = (ImageView) view.findViewById(R.id.icon);
 
 			view.setTag(drawerHolder);
@@ -54,6 +54,7 @@ public class DrawerAdapter extends ArrayAdapter<DrawerItem> {
 
 		drawerHolder.icon.setImageDrawable(view.getResources().getDrawable(
 				dItem.getImgResID()));
+		drawerHolder.ItemName.setTypeface(tf);
 		drawerHolder.ItemName.setText(dItem.getItemName());
 
 		return view;

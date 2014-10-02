@@ -16,6 +16,7 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/splash" />
+        android:src="@drawable/splash"
+        android:visibility="gone" />
 
 </RelativeLayout>

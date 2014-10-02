@@ -9,8 +9,8 @@
         android:id="@+id/instaFeed"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/activity_vertical_margin"
         android:divider="@android:color/transparent"
-        android:dividerHeight="@dimen/activity_vertical_margin" />
+        android:dividerHeight="@dimen/activity_vertical_margin"
+        android:padding="@dimen/activity_horizontal_margin" />
 
 </android.support.v4.widget.SwipeRefreshLayout>

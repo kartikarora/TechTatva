@@ -1,20 +1,15 @@
 package chipset.techtatva;
 
-import static chipset.techtatva.resources.Constants.*;
-import static chipset.techtatva.resources.Constants.PREF_FR;
-import static chipset.techtatva.resources.Constants.PREF_JSON;
-import static chipset.techtatva.resources.Constants.URL_EVENTS;
+import static chipset.techtatva.resources.Constants.PREF_CAT;
+import static chipset.techtatva.resources.Constants.PREF_DAY;
 
 import java.util.ArrayList;
-
-import org.json.JSONArray;
 
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.FragmentActivity;
@@ -22,7 +17,6 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -30,12 +24,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 import chipset.techtatva.resources.DrawerAdapter;
 import chipset.techtatva.resources.DrawerItem;
 import chipset.techtatva.resources.Functions;
 import chipset.techtatva.resources.TabsStatePagerAdapter;
 
-public class MainActivity extends FragmentActivity implements
+public class EventsActivity extends FragmentActivity implements
 		ActionBar.TabListener {
 	DrawerLayout mDrawerLayout;
 	ListView mDrawerList;
@@ -49,10 +44,10 @@ public class MainActivity extends FragmentActivity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_events);
 		actionBar = getActionBar();
 		mAdapter = new TabsStatePagerAdapter(getSupportFragmentManager(),
-				getApplicationContext());
+				EventsActivity.this);
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		String days[] = { "Day 1", "Day 2", "Day 3", "Day 4" };
@@ -109,32 +104,14 @@ public class MainActivity extends FragmentActivity implements
 		dataList.add(new DrawerItem(cat[13], R.drawable.mechatron2));
 		dataList.add(new DrawerItem(cat[14], R.drawable.robotrek2));
 		dataList.add(new DrawerItem(cat[15], R.drawable.turing2));
-		dataList.add(new DrawerItem(cat[16], R.drawable.turing2));
-		dataList.add(new DrawerItem(cat[17], R.drawable.turing2));
-		dataList.add(new DrawerItem(cat[18], R.drawable.turing2));
-		dataList.add(new DrawerItem(cat[19], R.drawable.turing2));
-		dataList.add(new DrawerItem(cat[20], R.drawable.turing2));
-		dataList.add(new DrawerItem(cat[21], R.drawable.turing2));
 
-		mDrawerList.setAdapter(new DrawerAdapter(MainActivity.this,
+		mDrawerList.setAdapter(new DrawerAdapter(EventsActivity.this,
 				R.layout.drawer_item, dataList));
 		mDrawerLayout.setDrawerShadow(
 				getResources().getDrawable(R.drawable.drawer_shadow),
 				GravityCompat.START);
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
-		try {
-			if (functions.isConnected(getApplicationContext()) == true
-					|| functions.getSharedPrefrencesString(
-							getApplicationContext(), PREF_JSON).equals(null)
-					|| functions.getSharedPrefrencesInt(
-							getApplicationContext(), PREF_FR) == 0) {
-				new EventsGet().execute();
-				functions.putSharedPrefrences(getApplicationContext(), PREF_FR,
-						1);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		functions.putSharedPrefrences(getApplicationContext(), PREF_CAT, 0);
 
 		mDrawerList.setOnItemClickListener(new OnItemClickListener() {
 
@@ -181,40 +158,27 @@ public class MainActivity extends FragmentActivity implements
 		}
 		int id = item.getItemId();
 		if (id == R.id.action_dev) {
-			startActivity(new Intent(MainActivity.this, DeveloperActivity.class));
+			startActivity(new Intent(EventsActivity.this,
+					DeveloperActivity.class));
 		} else if (id == R.id.action_contact) {
 			AlertDialog.Builder dialog = new AlertDialog.Builder(
-					MainActivity.this);
+					EventsActivity.this);
 			dialog.setTitle("Contact Us");
 			dialog.setMessage(getResources().getString(R.string.contactus));
 			dialog.setCancelable(false);
 			dialog.setNeutralButton(android.R.string.ok, null);
 			dialog.create();
 			dialog.show();
+		} else if (id == R.id.action_result) {
+			if (new Functions().isConnected(getApplicationContext()) == true) {
+				startActivity(new Intent(EventsActivity.this,
+						ResultActivity.class));
+			} else {
+				Toast.makeText(getApplicationContext(),
+						"No Internet Connection", Toast.LENGTH_SHORT).show();
+			}
 		}
 		return super.onOptionsItemSelected(item);
-	}
-
-	private class EventsGet extends AsyncTask<String, String, JSONArray> {
-
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-		}
-
-		@Override
-		protected JSONArray doInBackground(String... args) {
-			JSONArray jObj = functions.events(URL_EVENTS);
-			return jObj;
-		}
-
-		@Override
-		protected void onPostExecute(JSONArray jObj) {
-			String data = jObj.toString();
-			functions.putSharedPrefrences(getApplicationContext(), PREF_JSON,
-					data);
-			Log.e("TEST", data);
-		}
 	}
 
 	@Override

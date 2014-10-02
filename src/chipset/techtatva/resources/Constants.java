@@ -28,14 +28,15 @@ public class Constants {
 	public static String EVENT_TIME = "Duration";
 	public static String EVENT_DATE = "Date";
 	public static String EVENT_CONTACT = "Contact";
-	
+
 	public static String RES_CATEGORY = "Category";
 	public static String RES_NAME = "Event";
 	public static String RES_RESULT = "Result";
-	
+
 	public static String PREF_JSON = "jsonarray";
 	public static String PREF_CAT = "categoryno";
 	public static String PREF_DAY = "day";
 	public static String PREF_FR = "first_run";
+	public static String PREF_FRI = "first_run_image";
 
 }

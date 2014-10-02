@@ -27,6 +27,11 @@ public class Functions {
 		return json;
 	}
 
+	public JSONArray results(String URL) {
+		JSONArray json = jArrayParser.getJSONFromUrl(URL);
+		return json;
+	}
+
 	/*
 	 * Function to hide keyboard
 	 */
@@ -96,7 +101,7 @@ public class Functions {
 				.getSharedPreferences(preferenceName, 0); // 0 - for private
 															// mode
 
-		String val = pref.getString(preferenceName, null);
+		String val = pref.getString(preferenceName, "null");
 		return val;
 	}
 

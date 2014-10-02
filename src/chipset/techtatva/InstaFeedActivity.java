@@ -27,11 +27,11 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 import chipset.techtatva.resources.Functions;
 import chipset.techtatva.resources.InstaFeedAdapter;
 
@@ -105,7 +105,7 @@ public class InstaFeedActivity extends Activity {
 					dataMap.add(map);
 				}
 			} catch (Exception e) {
-				Log.e("ERROR", e.getMessage());
+				e.printStackTrace();
 			}
 
 			instaFeed.setAdapter(new InstaFeedAdapter(getApplicationContext(),
@@ -137,6 +137,14 @@ public class InstaFeedActivity extends Activity {
 			dialog.setNeutralButton(android.R.string.ok, null);
 			dialog.create();
 			dialog.show();
+		} else if (id == R.id.action_result) {
+			if (new Functions().isConnected(getApplicationContext()) == true) {
+				startActivity(new Intent(InstaFeedActivity.this,
+						ResultActivity.class));
+			} else {
+				Toast.makeText(getApplicationContext(),
+						"No Internet Connection", Toast.LENGTH_SHORT).show();
+			}
 		}
 		return super.onOptionsItemSelected(item);
 	}

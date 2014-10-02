@@ -1,10 +1,15 @@
 package chipset.techtatva;
 
+import chipset.techtatva.resources.Functions;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class DeveloperActivity extends Activity {
 
@@ -13,6 +18,37 @@ public class DeveloperActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_developer);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		TextView a;
+		Typeface tf = new Functions().getTypeface(getApplicationContext());
+		a = (TextView) findViewById(R.id.a);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.a1);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.b);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.b1);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.c);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.c1);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.d);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.d1);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.e);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.f);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.g);
+		a.setTypeface(tf);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.e1);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.f1);
+		a.setTypeface(tf);
+		a = (TextView) findViewById(R.id.g1);
+		a.setTypeface(tf);
 	}
 
 	@Override
@@ -30,7 +66,7 @@ public class DeveloperActivity extends Activity {
 		int id = item.getItemId();
 		if (id == android.R.id.home) {
 			onBackPressed();
-		}else if (id == R.id.action_contact) {
+		} else if (id == R.id.action_contact) {
 			AlertDialog.Builder dialog = new AlertDialog.Builder(
 					DeveloperActivity.this);
 			dialog.setTitle("Contact Us");
@@ -39,6 +75,14 @@ public class DeveloperActivity extends Activity {
 			dialog.setNeutralButton(android.R.string.ok, null);
 			dialog.create();
 			dialog.show();
+		} else if (id == R.id.action_result) {
+			if (new Functions().isConnected(getApplicationContext()) == true) {
+				startActivity(new Intent(DeveloperActivity.this,
+						ResultActivity.class));
+			} else {
+				Toast.makeText(getApplicationContext(),
+						"No Internet Connection", Toast.LENGTH_SHORT).show();
+			}
 		}
 		return super.onOptionsItemSelected(item);
 	}
