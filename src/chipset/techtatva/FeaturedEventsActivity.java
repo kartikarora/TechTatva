@@ -16,9 +16,9 @@ import chipset.techtatva.resources.Functions;
 
 public class FeaturedEventsActivity extends Activity {
 
-	LinearLayout fe1, fe2, fe3, fe4, fe5, fe6;
-	TextView fet1, fet2, fet3, fet4, fet5, fet6;
-	String[] fed1, fed2, fed3, fed4, fed5, fed6;
+	LinearLayout fe1, fe2, fe3, fe4, fe5;
+	TextView fet1, fet2, fet3, fet4, fet5;
+	String[] fed1, fed2, fed3, fed4, fed5;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,6 @@ public class FeaturedEventsActivity extends Activity {
 		fed3 = getResources().getStringArray(R.array.fe3);
 		fed4 = getResources().getStringArray(R.array.fe4);
 		fed5 = getResources().getStringArray(R.array.fe5);
-		fed6 = getResources().getStringArray(R.array.fe6);
 
 		Typeface tf = new Functions().getTypeface(getApplicationContext());
 
@@ -59,11 +58,6 @@ public class FeaturedEventsActivity extends Activity {
 		fet5 = (TextView) findViewById(R.id.fet5);
 		fet5.setText(fed5[0]);
 		fet5.setTypeface(tf);
-
-		fe6 = (LinearLayout) findViewById(R.id.fe6);
-		fet6 = (TextView) findViewById(R.id.fet6);
-		fet6.setTypeface(tf);
-		fet6.setText(fed6[0]);
 
 		fe1.setOnClickListener(new OnClickListener() {
 
@@ -141,20 +135,6 @@ public class FeaturedEventsActivity extends Activity {
 			}
 		});
 
-		fe6.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				AlertDialog.Builder dialog = new AlertDialog.Builder(
-						FeaturedEventsActivity.this);
-				dialog.setTitle(fed6[0]);
-				dialog.setMessage(fed6[1] + fed6[2] + fed6[3] + fed6[4]);
-				dialog.setNeutralButton(android.R.string.ok, null);
-				dialog.create();
-				dialog.show();
-
-			}
-		});
 	}
 
 	@Override

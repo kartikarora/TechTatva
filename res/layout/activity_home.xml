@@ -15,7 +15,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logobig" >
+        android:layout_below="@+id/logobig"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp" >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -27,8 +29,6 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="30dp"
                 android:background="@drawable/button_click"
                 android:gravity="center"
                 android:padding="15dp"
@@ -37,12 +37,24 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/eventButton"
+                android:id="@+id/tmcButton"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/registerButton"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_click"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="@string/the_manipal_conclave"
+                android:textColor="@color/clouds"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/eventButton"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tmcButton"
+                android:layout_centerHorizontal="true"
                 android:background="@drawable/button_click"
                 android:gravity="center"
                 android:padding="15dp"
@@ -56,7 +68,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/eventButton"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="5dp"
                 android:background="@drawable/button_click"
                 android:gravity="center"
                 android:padding="15dp"
@@ -70,7 +81,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/featuredEventButton"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="5dp"
                 android:background="@drawable/button_click"
                 android:gravity="center"
                 android:padding="15dp"

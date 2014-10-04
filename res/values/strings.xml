@@ -97,5 +97,6 @@
         <item>Day : 12th October\nTime : 10 AM to 1 PM and 4 PM to 6 PM\nLocation : Library Auditorium\n\n</item>
         <item>Contact Details\nName : Jal Panchal\nPhone : +919740981697</item>
     </string-array>
+        <string name="the_manipal_conclave">The Manipal Conclave</string>
 
 </resources>

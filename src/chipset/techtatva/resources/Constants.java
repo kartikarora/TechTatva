@@ -3,8 +3,9 @@ package chipset.techtatva.resources;
 public class Constants {
 
 	public static String URL_EVENTS = "http://schedule.techtatva.in/";
+	public static String URL_TMC = "http://tmc.techtatva.in/";
 	public static String URL_RESULTS = "http://results.techtatva.in/";
-	public static String URL_REG = "http://techtatva.in/register.php";
+	public static String URL_REG = "http://register.techtatva.in/";
 	public static String URL_BLOG = "http://blog.techtatva.in/";
 	public static String URL_INSTA = "https://api.instagram.com/v1/tags/techtatva14/media/recent?client_id=489944b506ea4e8fab4b3589c6848e2b";
 

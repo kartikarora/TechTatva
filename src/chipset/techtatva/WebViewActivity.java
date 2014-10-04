@@ -2,7 +2,7 @@ package chipset.techtatva;
 
 import static chipset.techtatva.resources.Constants.URL_BLOG;
 import static chipset.techtatva.resources.Constants.URL_REG;
-import chipset.techtatva.resources.Functions;
+import static chipset.techtatva.resources.Constants.URL_TMC;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -17,11 +17,12 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+import chipset.techtatva.resources.Functions;
 
 public class WebViewActivity extends Activity {
 	WebView registerView;
 	ProgressDialog pDialog;
-	boolean type;
+	int type;
 
 	@SuppressLint("SetJavaScriptEnabled")
 	@Override
@@ -40,15 +41,19 @@ public class WebViewActivity extends Activity {
 		registerView.getSettings().setAllowFileAccess(true);
 		registerView.getSettings().setBuiltInZoomControls(true);
 		registerView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-		type = getIntent().getExtras().getBoolean("TYPE");
+		type = getIntent().getExtras().getInt("TYPE");
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		if (type == true) {
+		if (type == 1) {
 			registerView.loadUrl(URL_REG);
 			getActionBar().setTitle(getResources().getString(R.string.reg));
-		} else if (type == false) {
+		} else if (type == 2) {
 			registerView.loadUrl(URL_BLOG);
 			getActionBar().setTitle(
 					getResources().getString(R.string.live_blog));
+		} else if (type == 3) {
+			registerView.loadUrl(URL_TMC);
+			getActionBar().setTitle(
+					getResources().getString(R.string.the_manipal_conclave));
 		}
 	}
 

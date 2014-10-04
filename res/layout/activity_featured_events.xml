@@ -147,34 +147,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold|italic" />
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/fe6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/fe5"
-            android:layout_marginTop="@dimen/activity_horizontal_margin"
-            android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:padding="@dimen/activity_horizontal_margin" >
-
-            <TextView
-                android:id="@+id/fet6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.7"
-                android:gravity="center"
-                android:text="@string/app_name"
-                android:textSize="20sp"
-                android:textStyle="bold|italic" />
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/conclave2" />
-        </LinearLayout>
     </RelativeLayout>
 
 </ScrollView>
