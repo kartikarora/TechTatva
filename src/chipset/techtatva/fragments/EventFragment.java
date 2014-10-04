@@ -18,7 +18,6 @@ import org.json.JSONObject;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +57,7 @@ public class EventFragment extends Fragment {
 
 		String getData = functions.getSharedPrefrencesString(getActivity(),
 				PREF_JSON);
-		Log.i("DATA", getData);
+
 		switch (day) {
 		case 0: {
 			x = "8";
@@ -81,14 +80,15 @@ public class EventFragment extends Fragment {
 		try {
 
 			jArr = new JSONArray(getData);
-			Log.e("jArr", String.valueOf(jArr));
+
 			for (int i = 0; i < jArr.length(); i++) {
 
 				JSONObject jObj = jArr.getJSONObject(i);
 				date = jObj.getString(EVENT_DATE);
+
+				HashMap<String, String> map = new HashMap<String, String>();
 				if (date.startsWith(x)) {
 					String[] cats = getResources().getStringArray(R.array.cat);
-					HashMap<String, String> map = new HashMap<String, String>();
 					cat = jObj.getString(EVENT_CATEGORY);
 					name = jObj.getString(EVENT_NAME);
 					detail = jObj.getString(EVENT_DETAIL);
@@ -115,14 +115,31 @@ public class EventFragment extends Fragment {
 						map.put(EVENT_CONTACT, cont);
 						eventData.add(map);
 					}
-				}
 
+				}
 			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
+
 		}
 
-		eventList.setAdapter(new EventAdapter(getActivity(), eventData));
+		if (eventData.isEmpty()) {
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put(EVENT_CATEGORY, "");
+			map.put(EVENT_NAME, "No Event");
+			map.put(EVENT_DETAIL,
+					"No event on this day under selected category");
+			map.put(EVENT_LOCATION, "");
+			map.put(EVENT_TIME, "");
+			map.put(EVENT_DATE, "");
+			map.put(EVENT_CONTACT, "");
+			eventData.add(map);
+			eventList.setClickable(false);
+		}
+
+		eventList.setAdapter(new EventAdapter(getActivity(), eventData, day,
+				categ));
 
 		eventList.setOnItemClickListener(new OnItemClickListener() {
 
@@ -143,10 +160,4 @@ public class EventFragment extends Fragment {
 
 		});
 	}
-
-	// @Override
-	// public void onDetach() {
-	// eventData.clear();
-	// super.onDetach();
-	// }
 }

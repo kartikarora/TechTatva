@@ -42,8 +42,7 @@ public class HomeActivity extends Activity {
 			public void onClick(View arg0) {
 				if (functions.isConnected(getApplicationContext())) {
 					startActivity(new Intent(HomeActivity.this,
-							WebViewActivity.class).putExtra("URL", true)
-							.putExtra("title", "Register"));
+							WebViewActivity.class).putExtra("TYPE", true));
 				} else {
 					Toast.makeText(getApplicationContext(),
 							"No Internet Connection", Toast.LENGTH_SHORT)
@@ -57,8 +56,7 @@ public class HomeActivity extends Activity {
 			public void onClick(View arg0) {
 				if (functions.isConnected(getApplicationContext())) {
 					startActivity(new Intent(HomeActivity.this,
-							WebViewActivity.class).putExtra("URL", false)
-							.putExtra("title", "Live Blog"));
+							WebViewActivity.class).putExtra("TYPE", false));
 				} else {
 					Toast.makeText(getApplicationContext(),
 							"No Internet Connection", Toast.LENGTH_SHORT)

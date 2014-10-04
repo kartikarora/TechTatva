@@ -72,7 +72,7 @@ public class FeaturedEventsActivity extends Activity {
 				AlertDialog.Builder dialog = new AlertDialog.Builder(
 						FeaturedEventsActivity.this);
 				dialog.setTitle(fed1[0]);
-				dialog.setMessage(fed1[1]  + fed1[2]);
+				dialog.setMessage(fed1[1] + fed1[2] + fed1[3]);
 				dialog.setNeutralButton(android.R.string.ok, null);
 				dialog.create();
 				dialog.show();
@@ -87,7 +87,7 @@ public class FeaturedEventsActivity extends Activity {
 				AlertDialog.Builder dialog = new AlertDialog.Builder(
 						FeaturedEventsActivity.this);
 				dialog.setTitle(fed2[0]);
-				dialog.setMessage(fed2[1] + fed2[2]);
+				dialog.setMessage(fed2[1] + fed2[2] + fed2[3] + fed2[4]);
 				dialog.setNeutralButton(android.R.string.ok, null);
 				dialog.create();
 				dialog.show();
@@ -102,7 +102,7 @@ public class FeaturedEventsActivity extends Activity {
 				AlertDialog.Builder dialog = new AlertDialog.Builder(
 						FeaturedEventsActivity.this);
 				dialog.setTitle(fed3[0]);
-				dialog.setMessage(fed3[1] + fed3[2]);
+				dialog.setMessage(fed3[1] + fed3[2] + fed3[3] + fed3[4]);
 				dialog.setNeutralButton(android.R.string.ok, null);
 				dialog.create();
 				dialog.show();
@@ -117,7 +117,8 @@ public class FeaturedEventsActivity extends Activity {
 				AlertDialog.Builder dialog = new AlertDialog.Builder(
 						FeaturedEventsActivity.this);
 				dialog.setTitle(fed4[0]);
-				dialog.setMessage(fed4[1] + fed4[2]);
+				dialog.setMessage(fed4[1] + fed4[2] + fed4[3] + fed4[4]
+						+ fed4[5]);
 				dialog.setNeutralButton(android.R.string.ok, null);
 				dialog.create();
 				dialog.show();
@@ -131,8 +132,8 @@ public class FeaturedEventsActivity extends Activity {
 			public void onClick(View arg0) {
 				AlertDialog.Builder dialog = new AlertDialog.Builder(
 						FeaturedEventsActivity.this);
-				dialog.setTitle(fed4[0]);
-				dialog.setMessage(fed5[1] + fed5[2]);
+				dialog.setTitle(fed5[0]);
+				dialog.setMessage(fed5[1] + fed5[2] + fed5[3]);
 				dialog.setNeutralButton(android.R.string.ok, null);
 				dialog.create();
 				dialog.show();
@@ -147,7 +148,7 @@ public class FeaturedEventsActivity extends Activity {
 				AlertDialog.Builder dialog = new AlertDialog.Builder(
 						FeaturedEventsActivity.this);
 				dialog.setTitle(fed6[0]);
-				dialog.setMessage(fed6[1] + fed6[2]);
+				dialog.setMessage(fed6[1] + fed6[2] + fed6[3] + fed6[4]);
 				dialog.setNeutralButton(android.R.string.ok, null);
 				dialog.create();
 				dialog.show();

@@ -24,10 +24,14 @@ public class EventAdapter extends BaseAdapter {
 	ArrayList<HashMap<String, String>> Data = new ArrayList<HashMap<String, String>>();
 	Context Cont;
 	LayoutInflater inflater;
+	int d, c;
 
-	public EventAdapter(Context context, ArrayList<HashMap<String, String>> data) {
+	public EventAdapter(Context context,
+			ArrayList<HashMap<String, String>> data, int d, int c) {
 		Cont = context;
 		Data = data;
+		this.d = d;
+		this.c = c;
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -50,11 +54,10 @@ public class EventAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int arg0, View arg1, ViewGroup arg2) {
-		HashMap<String, String> map = new HashMap<String, String>();
 		if (arg1 == null) {
 			arg1 = inflater.inflate(R.layout.event_item, null);
 		}
-		map = Data.get(arg0);
+
 		TextView name, date, time, contact, location;
 		Typeface tf = new Functions().getTypeface(Cont);
 		name = (TextView) arg1.findViewById(R.id.eventName);
@@ -63,15 +66,28 @@ public class EventAdapter extends BaseAdapter {
 		contact = (TextView) arg1.findViewById(R.id.eventContact);
 		location = (TextView) arg1.findViewById(R.id.eventLocation);
 		name.setTypeface(tf);
-		name.setText((String) map.get(EVENT_NAME));
 		date.setTypeface(tf);
-		date.setText((String) map.get(EVENT_DATE));
 		time.setTypeface(tf);
-		time.setText((String) map.get(EVENT_TIME));
+		time.setTypeface(tf);
 		contact.setTypeface(tf);
-		contact.setText((String) map.get(EVENT_CONTACT));
 		location.setTypeface(tf);
-		location.setText((String) map.get(EVENT_LOCATION));
+		HashMap<String, String> map = new HashMap<String, String>();
+		map = Data.get(arg0);
+		String x = (String) map.get(EVENT_NAME);
+		if (x.equals("No Event")) {
+			name.setText(x);
+			date.setVisibility(View.GONE);
+			time.setVisibility(View.GONE);
+			contact.setVisibility(View.GONE);
+			location.setVisibility(View.GONE);
+		} else {
+
+			name.setText((String) map.get(EVENT_NAME));
+			date.setText((String) map.get(EVENT_DATE));
+			time.setText((String) map.get(EVENT_TIME));
+			contact.setText((String) map.get(EVENT_CONTACT));
+			location.setText((String) map.get(EVENT_LOCATION));
+		}
 		return arg1;
 	}
 }

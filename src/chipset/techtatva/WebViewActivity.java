@@ -22,7 +22,6 @@ public class WebViewActivity extends Activity {
 	WebView registerView;
 	ProgressDialog pDialog;
 	boolean type;
-	String title;
 
 	@SuppressLint("SetJavaScriptEnabled")
 	@Override
@@ -41,14 +40,16 @@ public class WebViewActivity extends Activity {
 		registerView.getSettings().setAllowFileAccess(true);
 		registerView.getSettings().setBuiltInZoomControls(true);
 		registerView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-		type = getIntent().getExtras().getBoolean("URL");
-		title = getIntent().getExtras().getString("title");
+		type = getIntent().getExtras().getBoolean("TYPE");
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-		getActionBar().setTitle(title);
-		if (type == true)
+		if (type == true) {
 			registerView.loadUrl(URL_REG);
-		else if (type == false)
+			getActionBar().setTitle(getResources().getString(R.string.reg));
+		} else if (type == false) {
 			registerView.loadUrl(URL_BLOG);
+			getActionBar().setTitle(
+					getResources().getString(R.string.live_blog));
+		}
 	}
 
 	private class MyBrowser extends WebViewClient {

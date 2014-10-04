@@ -38,5 +38,6 @@ public class Constants {
 	public static String PREF_DAY = "day";
 	public static String PREF_FR = "first_run";
 	public static String PREF_FRI = "first_run_image";
+	public static String PREF_EMPTY = "khali_hai";
 
 }

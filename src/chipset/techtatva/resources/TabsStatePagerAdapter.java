@@ -1,7 +1,8 @@
 package chipset.techtatva.resources;
 
 import static chipset.techtatva.resources.Constants.PREF_CAT;
-import static chipset.techtatva.resources.Constants.*;
+import static chipset.techtatva.resources.Constants.PREF_DAY;
+import static chipset.techtatva.resources.Constants.PREF_JSON;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -22,25 +23,15 @@ public class TabsStatePagerAdapter extends FragmentStatePagerAdapter {
 
 	@Override
 	public Fragment getItem(int index) {
-		// switch (index) {
-		// case 0:
 		functions.putSharedPrefrences(context, PREF_DAY, index);
 		if (functions.getSharedPrefrencesString(context, PREF_JSON).equals(
 				"null")) {
-
 			return new ProgressFragment(context);
-
 		}
+
 		return new EventFragment(functions.getSharedPrefrencesInt(context,
 				PREF_CAT), index);
-		// case 1:
-		// return new EventFragmentTwo();
-		// case 2:
-		// return new EventFragmentThree();
-		// case 3:
-		// return new EventFragmentFour();
-		// }
-		// return null;
+
 	}
 
 	@Override
