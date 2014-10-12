@@ -4,6 +4,7 @@ import static chipset.techtatva.resources.Constants.PREF_JSON;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -13,8 +14,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.Toast;
 import chipset.techtatva.resources.Functions;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 @SuppressLint("SetJavaScriptEnabled")
 public class HomeActivity extends Activity {
@@ -30,7 +32,7 @@ public class HomeActivity extends Activity {
 		Button instaFeedButton = (Button) findViewById(R.id.instaFeedButton);
 		Button liveBlogButton = (Button) findViewById(R.id.liveBlogButton);
 		Button featuredEventButton = (Button) findViewById(R.id.featuredEventButton);
-		Button tmctButton = (Button) findViewById(R.id.tmcButton);
+		final Button tmctButton = (Button) findViewById(R.id.tmcButton);
 		Typeface tf = functions.getTypeface(getApplicationContext());
 		registerButton.setTypeface(tf);
 		eventsButton.setTypeface(tf);
@@ -47,9 +49,8 @@ public class HomeActivity extends Activity {
 					startActivity(new Intent(HomeActivity.this,
 							WebViewActivity.class).putExtra("TYPE", 1));
 				} else {
-					Toast.makeText(getApplicationContext(),
-							"No Internet Connection", Toast.LENGTH_SHORT)
-							.show();
+					Crouton.showText(HomeActivity.this,
+							"No Internet Connection", Style.ALERT);
 				}
 			}
 		});
@@ -62,9 +63,8 @@ public class HomeActivity extends Activity {
 					startActivity(new Intent(HomeActivity.this,
 							WebViewActivity.class).putExtra("TYPE", 2));
 				} else {
-					Toast.makeText(getApplicationContext(),
-							"No Internet Connection", Toast.LENGTH_SHORT)
-							.show();
+					Crouton.showText(HomeActivity.this,
+							"No Internet Connection", Style.ALERT);
 				}
 			}
 		});
@@ -77,9 +77,28 @@ public class HomeActivity extends Activity {
 					startActivity(new Intent(HomeActivity.this,
 							WebViewActivity.class).putExtra("TYPE", 3));
 				} else {
-					Toast.makeText(getApplicationContext(),
-							"No Internet Connection", Toast.LENGTH_SHORT)
-							.show();
+					String fe6[] = getResources().getStringArray(R.array.fe6);
+					AlertDialog.Builder alert = new AlertDialog.Builder(
+							HomeActivity.this);
+					alert.setTitle(fe6[0]);
+					alert.setMessage(fe6[1]
+							+ fe6[2]
+							+ fe6[3]
+							+ fe6[4]
+							+ "\n\nFor more details, switch on your internet and tap on Details");
+					alert.setNegativeButton(android.R.string.ok, null);
+					alert.setPositiveButton("DETAILS",
+							new DialogInterface.OnClickListener() {
+
+								@Override
+								public void onClick(DialogInterface dialog,
+										int which) {
+									tmctButton.performClick();
+								}
+							});
+					alert.create();
+					alert.show();
+
 				}
 
 			}
@@ -95,9 +114,8 @@ public class HomeActivity extends Activity {
 				} else {
 					if (functions.getSharedPrefrencesString(
 							getApplicationContext(), PREF_JSON).equals("null")) {
-						Toast.makeText(getApplicationContext(),
-								"No internet connection", Toast.LENGTH_SHORT)
-								.show();
+						Crouton.showText(HomeActivity.this,
+								"No Internet Connection", Style.ALERT);
 					} else {
 						startActivity(new Intent(HomeActivity.this,
 								EventsActivity.class));
@@ -115,9 +133,9 @@ public class HomeActivity extends Activity {
 					startActivity(new Intent(HomeActivity.this,
 							InstaFeedActivity.class));
 				} else {
-					Toast.makeText(getApplicationContext(),
-							"No Internet Connection", Toast.LENGTH_SHORT)
-							.show();
+
+					Crouton.showText(HomeActivity.this,
+							"No Internet Connection", Style.ALERT);
 				}
 			}
 		});

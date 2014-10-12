@@ -8,6 +8,7 @@
         android:id="@+id/logobig"
         android:layout_width="wrap_content"
         android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/logobig" />
@@ -16,19 +17,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logobig"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="30dp" >
+        android:layout_marginTop="15dp" >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
 
             <Button
                 android:id="@+id/registerButton"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/button_click"
                 android:gravity="center"
                 android:padding="15dp"
@@ -38,10 +42,12 @@
 
             <Button
                 android:id="@+id/tmcButton"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/registerButton"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/button_click"
                 android:gravity="center"
                 android:padding="15dp"
@@ -51,10 +57,12 @@
 
             <Button
                 android:id="@+id/eventButton"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tmcButton"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/button_click"
                 android:gravity="center"
                 android:padding="15dp"
@@ -64,10 +72,12 @@
 
             <Button
                 android:id="@+id/featuredEventButton"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/eventButton"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/button_click"
                 android:gravity="center"
                 android:padding="15dp"
@@ -77,10 +87,12 @@
 
             <Button
                 android:id="@+id/instaFeedButton"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/featuredEventButton"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/button_click"
                 android:gravity="center"
                 android:padding="15dp"
@@ -90,10 +102,12 @@
 
             <Button
                 android:id="@+id/liveBlogButton"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/instaFeedButton"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@drawable/button_click"
                 android:gravity="center"
                 android:padding="15dp"

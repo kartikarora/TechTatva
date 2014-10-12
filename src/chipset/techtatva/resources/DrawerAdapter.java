@@ -2,6 +2,8 @@ package chipset.techtatva.resources;
 
 import java.util.List;
 
+import com.squareup.picasso.Picasso;
+
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Typeface;
@@ -51,9 +53,7 @@ public class DrawerAdapter extends ArrayAdapter<DrawerItem> {
 		}
 
 		DrawerItem dItem = (DrawerItem) this.drawerItemList.get(position);
-
-		drawerHolder.icon.setImageDrawable(view.getResources().getDrawable(
-				dItem.getImgResID()));
+		Picasso.with(context).load(dItem.getImgResID()).into(drawerHolder.icon);
 		drawerHolder.ItemName.setTypeface(tf);
 		drawerHolder.ItemName.setText(dItem.getItemName());
 

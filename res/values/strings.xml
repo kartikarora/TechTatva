@@ -55,9 +55,10 @@
         <item>Mechatron</item>
         <item>Robotrek</item>
         <item>Turing</item>
+        <item>Gaming</item>
     </string-array>
     <string-array name="fe1">
-        <item>Vedant 4.0</item>
+        <item>Vedanth 4.0</item>
         <item>Yet again, continuing with our efforts we present to you VEDANTH 4.0 - an even bigger endeavour, with more challenging projects and a larger portfolio of events. With a host of other extravaganzas, VEDANTH 4.0 will show you what the next-level of Robotics is! This time, we thrive to present to you the most cutting-edge projects. Come, get enthralled!\n\n</item>
         <item>Date : 8th October\nTime : All Day\nLocation : MIT Quadrangle\n\n</item>
         <item>Contact Details\nName : Kishore Khed\nPhone : +919740573056</item>
@@ -97,6 +98,7 @@
         <item>Day : 12th October\nTime : 10 AM to 1 PM and 4 PM to 6 PM\nLocation : Library Auditorium\n\n</item>
         <item>Contact Details\nName : Jal Panchal\nPhone : +919740981697</item>
     </string-array>
-        <string name="the_manipal_conclave">The Manipal Conclave</string>
+
+    <string name="the_manipal_conclave">The Manipal Conclave</string>
 
 </resources>

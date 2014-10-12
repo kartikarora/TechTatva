@@ -11,8 +11,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import chipset.techtatva.resources.Functions;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class FeaturedEventsActivity extends Activity {
 
@@ -166,8 +167,8 @@ public class FeaturedEventsActivity extends Activity {
 				startActivity(new Intent(FeaturedEventsActivity.this,
 						ResultActivity.class));
 			} else {
-				Toast.makeText(getApplicationContext(),
-						"No Internet Connection", Toast.LENGTH_SHORT).show();
+				Crouton.showText(FeaturedEventsActivity.this,
+						"No Internet Connection", Style.ALERT);
 			}
 		}
 		return super.onOptionsItemSelected(item);

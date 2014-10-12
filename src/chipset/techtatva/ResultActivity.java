@@ -28,9 +28,10 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import chipset.techtatva.resources.Functions;
 import chipset.techtatva.resources.ResultAdapter;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class ResultActivity extends Activity {
-
 	SwipeRefreshLayout resultSwipe;
 	ListView resultList;
 	Functions functions = new Functions();
@@ -57,23 +58,30 @@ public class ResultActivity extends Activity {
 			}
 		});
 
-		resultList.setOnItemClickListener(new OnItemClickListener() {
+		try {
+			resultList.setOnItemClickListener(new OnItemClickListener() {
 
-			@Override
-			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-					long arg3) {
-				AlertDialog.Builder dialog = new AlertDialog.Builder(
-						ResultActivity.this);
-				dialog.setTitle((String) dataMap.get(arg2).get(RES_NAME)
-						+ " - " + (String) dataMap.get(arg2).get(RES_CATEGORY));
-				dialog.setMessage((String) dataMap.get(arg2).get(RES_RESULT));
-				dialog.setCancelable(false);
-				dialog.setNeutralButton(android.R.string.ok, null);
-				dialog.create();
-				dialog.show();
+				@Override
+				public void onItemClick(AdapterView<?> arg0, View arg1,
+						int arg2, long arg3) {
 
-			}
-		});
+					AlertDialog.Builder dialog = new AlertDialog.Builder(
+							ResultActivity.this);
+					dialog.setTitle((String) dataMap.get(arg2).get(RES_NAME)
+							+ " - "
+							+ (String) dataMap.get(arg2).get(RES_CATEGORY));
+					dialog.setMessage((String) dataMap.get(arg2)
+							.get(RES_RESULT));
+					dialog.setCancelable(false);
+					dialog.setNeutralButton(android.R.string.ok, null);
+					dialog.create();
+					dialog.show();
+				}
+
+			});
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	private class ResultGet extends AsyncTask<String, String, JSONArray> {
@@ -112,13 +120,16 @@ public class ResultActivity extends Activity {
 						map.put(RES_RESULT, jObj.getString(RES_RESULT));
 						dataMap.add(map);
 					}
-
 				}
-				resultList.setAdapter(new ResultAdapter(
-						getApplicationContext(), dataMap));
+				ResultAdapter adapter = new ResultAdapter(
+						getApplicationContext(), dataMap);
+				resultList.setAdapter(adapter);
 
 			} catch (Exception e) {
 				e.printStackTrace();
+				Crouton.showText(ResultActivity.this,
+						"Error connecting to the server! Please try again",
+						Style.ALERT);
 			}
 
 		}

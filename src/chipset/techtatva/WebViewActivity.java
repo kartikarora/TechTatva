@@ -16,8 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
 import chipset.techtatva.resources.Functions;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class WebViewActivity extends Activity {
 	WebView registerView;
@@ -118,8 +119,8 @@ public class WebViewActivity extends Activity {
 				startActivity(new Intent(WebViewActivity.this,
 						ResultActivity.class));
 			} else {
-				Toast.makeText(getApplicationContext(),
-						"No Internet Connection", Toast.LENGTH_SHORT).show();
+				Crouton.showText(WebViewActivity.this,
+						"No Internet Connection", Style.ALERT);
 			}
 		}
 		return super.onOptionsItemSelected(item);

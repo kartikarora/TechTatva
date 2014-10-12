@@ -1,6 +1,5 @@
 package chipset.techtatva;
 
-import chipset.techtatva.resources.Functions;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -9,7 +8,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
+import chipset.techtatva.resources.Functions;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class DeveloperActivity extends Activity {
 
@@ -80,8 +81,8 @@ public class DeveloperActivity extends Activity {
 				startActivity(new Intent(DeveloperActivity.this,
 						ResultActivity.class));
 			} else {
-				Toast.makeText(getApplicationContext(),
-						"No Internet Connection", Toast.LENGTH_SHORT).show();
+				Crouton.showText(DeveloperActivity.this,
+						"No Internet Connection", Style.ALERT);
 			}
 		}
 		return super.onOptionsItemSelected(item);

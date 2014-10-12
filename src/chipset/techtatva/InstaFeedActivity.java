@@ -31,9 +31,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.Toast;
 import chipset.techtatva.resources.Functions;
 import chipset.techtatva.resources.InstaFeedAdapter;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class InstaFeedActivity extends Activity {
 	SwipeRefreshLayout instaSwipe;
@@ -79,33 +80,45 @@ public class InstaFeedActivity extends Activity {
 			ArrayList<HashMap<String, String>> dataMap = new ArrayList<HashMap<String, String>>();
 			instaSwipe.setRefreshing(false);
 			try {
-				JSONArray data = jObj.getJSONArray(INSTA_DATA);
-				for (int i = 0; i < data.length(); i++) {
-					JSONObject c = data.getJSONObject(i);
-					JSONObject x, y;
-					x = c.getJSONObject(INSTA_COMMENTS);
-					String cc = String.valueOf(x.getInt(INSTA_COUNT));
-					x = c.getJSONObject(INSTA_LIKES);
-					String lc = String.valueOf(x.getInt(INSTA_COUNT));
-					x = c.getJSONObject(INSTA_IMAGES);
-					y = x.getJSONObject(INSTA_IMAGE);
-					String url = y.getString(INSTA_IMAGE_URL);
-					x = c.getJSONObject(INSTA_CAPTION);
-					String text = x.getString(INSTA_CAPTION_TEXT);
-					x = c.getJSONObject(INSTA_USER);
-					String user = x.getString(INSTA_USER_USERNAME);
-					String userpic = x.getString(INSTA_USER_PROFILE);
-					HashMap<String, String> map = new HashMap<String, String>();
-					map.put(INSTA_COMMENTS, cc);
-					map.put(INSTA_LIKES, lc);
-					map.put(INSTA_IMAGE_URL, url);
-					map.put(INSTA_CAPTION_TEXT, text);
-					map.put(INSTA_USER_USERNAME, user);
-					map.put(INSTA_USER_PROFILE, userpic);
-					dataMap.add(map);
+				JSONObject meta = jObj.getJSONObject("meta");
+				int code = meta.getInt("code");
+				if (code != 200) {
+					Crouton.showText(
+							InstaFeedActivity.this,
+							"Error communicating with the server. Please try after sometime",
+							Style.ALERT);
+				} else {
+					JSONArray data = jObj.getJSONArray(INSTA_DATA);
+					for (int i = 0; i < data.length(); i++) {
+						JSONObject c = data.getJSONObject(i);
+						JSONObject x, y;
+						x = c.getJSONObject(INSTA_COMMENTS);
+						String cc = String.valueOf(x.getInt(INSTA_COUNT));
+						x = c.getJSONObject(INSTA_LIKES);
+						String lc = String.valueOf(x.getInt(INSTA_COUNT));
+						x = c.getJSONObject(INSTA_IMAGES);
+						y = x.getJSONObject(INSTA_IMAGE);
+						String url = y.getString(INSTA_IMAGE_URL);
+						x = c.getJSONObject(INSTA_CAPTION);
+						String text = x.getString(INSTA_CAPTION_TEXT);
+						x = c.getJSONObject(INSTA_USER);
+						String user = x.getString(INSTA_USER_USERNAME);
+						String userpic = x.getString(INSTA_USER_PROFILE);
+						HashMap<String, String> map = new HashMap<String, String>();
+						map.put(INSTA_COMMENTS, cc);
+						map.put(INSTA_LIKES, lc);
+						map.put(INSTA_IMAGE_URL, url);
+						map.put(INSTA_CAPTION_TEXT, text);
+						map.put(INSTA_USER_USERNAME, user);
+						map.put(INSTA_USER_PROFILE, userpic);
+						dataMap.add(map);
+					}
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
+				Crouton.showText(InstaFeedActivity.this,
+						"Error connecting to the server! Please try again",
+						Style.ALERT);
 			}
 
 			instaFeed.setAdapter(new InstaFeedAdapter(getApplicationContext(),
@@ -142,8 +155,8 @@ public class InstaFeedActivity extends Activity {
 				startActivity(new Intent(InstaFeedActivity.this,
 						ResultActivity.class));
 			} else {
-				Toast.makeText(getApplicationContext(),
-						"No Internet Connection", Toast.LENGTH_SHORT).show();
+				Crouton.showText(InstaFeedActivity.this,
+						"No Internet Connection", Style.ALERT);
 			}
 		}
 		return super.onOptionsItemSelected(item);

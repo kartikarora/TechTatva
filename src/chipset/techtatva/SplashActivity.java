@@ -42,7 +42,7 @@ public class SplashActivity extends Activity {
 			public boolean onError(MediaPlayer arg0, int arg1, int arg2) {
 				splashVideo.setVisibility(View.GONE);
 				splash.setVisibility(View.VISIBLE);
-				return false;
+				return true;
 			}
 		});
 	}

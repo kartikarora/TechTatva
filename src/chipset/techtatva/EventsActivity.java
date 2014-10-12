@@ -24,11 +24,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 import chipset.techtatva.resources.DrawerAdapter;
 import chipset.techtatva.resources.DrawerItem;
 import chipset.techtatva.resources.Functions;
 import chipset.techtatva.resources.TabsStatePagerAdapter;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class EventsActivity extends FragmentActivity implements
 		ActionBar.TabListener {
@@ -47,7 +48,7 @@ public class EventsActivity extends FragmentActivity implements
 		setContentView(R.layout.activity_events);
 		actionBar = getActionBar();
 		mAdapter = new TabsStatePagerAdapter(getSupportFragmentManager(),
-				EventsActivity.this);
+				EventsActivity.this, EventsActivity.this);
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		String days[] = { "Day 1", "Day 2", "Day 3", "Day 4" };
@@ -104,6 +105,7 @@ public class EventsActivity extends FragmentActivity implements
 		dataList.add(new DrawerItem(cat[13], R.drawable.mechatron2));
 		dataList.add(new DrawerItem(cat[14], R.drawable.robotrek2));
 		dataList.add(new DrawerItem(cat[15], R.drawable.turing2));
+		dataList.add(new DrawerItem(cat[16], R.drawable.gaming2));
 
 		mDrawerList.setAdapter(new DrawerAdapter(EventsActivity.this,
 				R.layout.drawer_item, dataList));
@@ -170,12 +172,12 @@ public class EventsActivity extends FragmentActivity implements
 			dialog.create();
 			dialog.show();
 		} else if (id == R.id.action_result) {
-			if (new Functions().isConnected(getApplicationContext()) == true) {
+			if (new Functions().isConnected(getApplicationContext())) {
 				startActivity(new Intent(EventsActivity.this,
 						ResultActivity.class));
 			} else {
-				Toast.makeText(getApplicationContext(),
-						"No Internet Connection", Toast.LENGTH_SHORT).show();
+				Crouton.showText(EventsActivity.this, "No Internet Connection",
+						Style.ALERT);
 			}
 		}
 		return super.onOptionsItemSelected(item);
