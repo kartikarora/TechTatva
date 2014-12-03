@@ -1,0 +1,24 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/resultSwipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sorte">
+
+    <include layout="@layout/toolbar_rest" />
+
+    <ProgressBar
+        android:id="@+id/pBarTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center" />
+
+    <ListView
+        android:id="@+id/result_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/activity_vertical_margin"
+        android:padding="@dimen/activity_horizontal_margin" />
+
+</android.support.v4.widget.SwipeRefreshLayout>

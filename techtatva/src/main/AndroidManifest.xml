@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="chipset.techtatva"
+    android:screenOrientation="portrait">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.SplashActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.EventsActivity"
+            android:icon="@drawable/ic_launch"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HomeActivity"
+            android:icon="@drawable/ic_launch"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:icon="@drawable/ic_launch"
+            android:label="@string/title_activity_web_view"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ResultActivity"
+            android:icon="@drawable/ic_launch"
+            android:label="@string/title_activity_result"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.DeveloperActivity"
+            android:icon="@drawable/ic_launch"
+            android:label="@string/title_activity_developer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.InstaFeedActivity"
+            android:icon="@drawable/ic_launch"
+            android:label="@string/title_activity_insta_feed"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.FeaturedEventsActivity"
+            android:icon="@drawable/ic_launch"
+            android:label="@string/title_activity_featured_events"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

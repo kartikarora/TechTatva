@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/techtatva</item>
+        <item name="colorPrimaryDark">@color/techtatva</item>
+        <item name="colorAccent">@color/techtatva</item>
+        <item name="windowActionBar">false</item>
+    </style>
+</resources>
