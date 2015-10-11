@@ -1,26 +1,72 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.3.0'
+        // The Fabric Gradle plugin uses an open ended version to react
+        // quickly to Android tooling updates
+        classpath 'io.fabric.tools:gradle:1.20.0'
+    }
+}
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.1"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    def versionMajor = 2
+    def versionMinor = 3
+    def versionPatch = 1
+    def versionBuild = 151011
+    def versionId = ((versionMajor * 40) + (versionMinor * 20) + (versionPatch * 10) + (versionBuild * 5))
+
     defaultConfig {
         applicationId "chipset.techtatva"
-        minSdkVersion 11
-        targetSdkVersion 21
-        versionCode 7
-        versionName "2.0"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode versionId
+        versionName "${versionMajor}.${versionMinor}.${versionPatch} - ${versionId}"
     }
     buildTypes {
         release {
-            runProguard true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url 'https://maven.fabric.io/public'
+    }
+}
 
 dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
-    compile 'com.android.support:appcompat-v7:21.0.2'
-    compile 'com.android.support:support-v4:21.0.2'
-    compile 'com.squareup.picasso:picasso:2.3.4'
+    compile 'com.android.support:cardview-v7:22.2.1'
+    compile 'com.android.support:recyclerview-v7:22.2.1'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:design:22.2.1'
+    compile 'com.android.support:customtabs:23.0.1'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.github.chipset95:Potato-Library:0.1.4'
+    compile 'com.mcxiaoke.photoview:library:1.2.3'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.eftimoff:androidplayer:1.0.3@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.squareup:seismic:1.0.2'
+    compile 'com.github.jorgecastilloprz:fillableloaders:1.02@aar'
+    compile 'com.squareup:seismic:1.0.2'
+    compile 'com.github.thiagokimo:KonamiCode:1.1.4'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
+        transitive = true;
+    }
+    compile 'com.mcxiaoke.volley:library:1.0.17'
+    compile 'com.parse:parse-android:1.10.2'
 }

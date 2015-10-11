@@ -1,47 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">TechTatva\'14</string>
-    <string name="drawer_opened">Open</string>
-    <string name="drawer_closed">Close</string>
-    <string name="reg">Register</string>
-    <string name="insta">Insta Feed</string>
-    <string name="events">Events</string>
-    <string name="results">Results</string>
-    <string name="contact">Contact Us</string>
-    <string name="dev">Developers</string>
-    <string name="zero">0</string>
-    <string name="empty">No events</string>
-    <string name="nc">Oops!\nNo internet connection!</string>
-    <string name="title_activity_splash">Splash</string>
+    <string name="app_name">TechTatva 15</string>
+    <string name="no_connection_one">Oops! Could not fetch content!</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_home">Home</string>
-    <string name="title_activity_insta_feed">#techtatva14</string>
-    <string name="title_activity_web_view">WebView</string>
-    <string name="title_activity_developer">Developers</string>
+    <string name="open">Open</string>
+    <string name="action_image_save">Save Image</string>
+    <string name="action_image_share">Share</string>
+    <string name="close">Close</string>
+    <string name="text_retry">Retry</string>
+    <string name="try_again">Seems like a network issue\nPlease try again in sometime!</string>
+    <string name="action_settings">Settings</string>
+    <string name="instafeed">InstaFeed</string>
+    <string name="developers">Developers</string>
+    <string name="contact">Contact Us</string>
+    <string name="result">Results</string>
+    <string name="drawer_closed">Close</string>
+    <string name="drawer_open">Open</string>
+    <string name="title_activity_event">EventActivity</string>
+    <string name="team_lead">Team Lead</string>
+    <string name="kartik">Kartik Arora</string>
+    <string name="anuraag">Anuraag Baishya</string>
+    <string name="saketh">Saketh Kaparthi</string>
+    <string name="yash">Yash Kumar Lal</string>
+    <string name="sushant">Sushant Gakhar</string>
+    <string name="manoj">Manoj Bhat</string>
+    <string name="samarth">Samarth Jain</string>
+    <string name="rohil">Rohil Vijaywargiya</string>
+    <string name="mayank">Mayank Bansal</string>
+    <string name="android">Android Developer</string>
+    <string name="ios">iOS Developer</string>
+    <string name="graphics">Graphics Designer</string>
+    <string name="coordinator">Co-Ordinator</string>
+    <string name="windows">Windows Phone Developer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_email">EmailActivity</string>
+    <string name="title_activity_event_search">EventSearchActivity</string>
     <string name="title_activity_result">Results</string>
-    <string name="team_leader">Team Lead</string>
-    <string name="tanay_agarwal">Tanay Agrawal</string>
-    <string name="samrth_jain">Samarth Jain</string>
-    <string name="ui_ux_graphic_designer">UI/UX &amp; Designer</string>
-    <string name="amrit_ayyar">Amrit Ayyar</string>
-    <string name="backend_developer">Backend Developer</string>
-    <string name="vidya_sagar">Vidya Sagar</string>
-    <string name="animation_videofx">Animation &amp; VideoFX</string>
-    <string name="shubham_sorte">Shubham Sorte</string>
-    <string name="ios_app_developer">iOS Developer</string>
-    <string name="kartik_arora">Kartik Arora</string>
-    <string name="android_app_developer">Android Developer</string>
-    <string name="saksham_khanna">Saksham Khanna</string>
-    <string name="windows_phone_app_developer">Windows Developer</string>
-    <string name="live_blog">Blog</string>
-    <string name="contactus">Convener\n\tJal Panchal\n\tEmail: convener@techtatva.in\n\tPhone: +919740981697\n\nConvener\n\tAparna Sandhu\n\tEmail: convener@techtatva.in\n\tPhone: +918123677470</string>
-    <string name="title_activity_featured_events">Featured Events</string>
-
-    <string-array name="cat">
-        <item>Snapshot</item>
+    <string name="title_activity_robo_result">Robowars Results</string>
+    <string name="title_activity_image" />
+    <string name="title_activity_insta_feed">#techtatva15</string>
+    <string name="shake">Shake to go back</string>
+    <string name="lug_manipal">LUG Manipal</string>
+    <string name="title_activity_all_events">AllEvents</string>
+    <string-array name="category">
+        <item>All Events</item>
+        <item>Featured Events</item>
         <item>Acumen</item>
         <item>Airborne</item>
+        <item>Alacrity</item>
         <item>Bizzmaestro</item>
         <item>Cheminova</item>
         <item>Constructure</item>
@@ -49,7 +55,6 @@
         <item>Electrific</item>
         <item>Energia</item>
         <item>Epsilon</item>
-        <item>Gizmo</item>
         <item>Kraftwagen</item>
         <item>Mechanize</item>
         <item>Mechatron</item>
@@ -57,48 +62,10 @@
         <item>Turing</item>
         <item>Gaming</item>
     </string-array>
-    <string-array name="fe1">
-        <item>Vedanth 4.0</item>
-        <item>Yet again, continuing with our efforts we present to you VEDANTH 4.0 - an even bigger endeavour, with more challenging projects and a larger portfolio of events. With a host of other extravaganzas, VEDANTH 4.0 will show you what the next-level of Robotics is! This time, we thrive to present to you the most cutting-edge projects. Come, get enthralled!\n\n</item>
-        <item>Date : 8th October\nTime : All Day\nLocation : MIT Quadrangle\n\n</item>
-        <item>Contact Details\nName : Kishore Khed\nPhone : +919740573056</item>
-    </string-array>
-    <string-array name="fe2">
-        <item>Paper Presentation</item>
-        <item>TechTatva \'14 invites the bright minds across this nation to present their ground breaking ideas and take part in the Technical Paper Presentation Competition hosted by MIT, Manipal. Every year around 400 talented individuals from various engineering streams participate and exhibit their ideas in front of our esteemed panel of judges.\n\n</item>
-        <item>Day : 8th October\nTime: 2 PM to 5:30 PM\nLocation: AB5 301&#8211;306\n\n</item>
-        <item>Day : 9th October\nTime: 2 PM to 5:30 PM\nLocation: AB5 301&#8211;305\n\n</item>
-        <item>Contact Details\nName : Srishti\nPhone : +919740588560\nName : Mukul \nPhone : +919481028183</item>
-    </string-array>
-    <string-array name="fe3">
-        <item>Robowars</item>
-        <item>This is war, may the force be with you!\n\n</item>
-        <item>It began with the strike of a hammer. The opponent tried to block it but failed. Outside the ring his controlled grappled with the joystick. Trying to bring it back into control. Yet Thor went on, smashing away with the force of a Viking God, blow after blow, bending steel and crushing metal. Thor\'s controller gunned away with fury, this was what it had all been about. Unquestioned victory. But it wasn\'t going to end now, and in a final try for victory the man outside the ring pressed a button, as the air filled with the sounds of whirring blades&#8230; \nThis was War. And only the best Robot would emerge in glory.\n\n</item>
-        <item>Day : All 4 days\nTime : All Day\nLocation : KC Area\n\n</item>
-        <item>Contact Details\nName : Disha\nPhone : +919663562870\nName : Karl\nPhone : +919916871049</item>
-    </string-array>
-    <string-array name="fe4">
-        <item>Fuel RC 3</item>
-        <item>Racing is an art. Racing with passion, that’s high art!\n\n</item>
-        <item>A sound only comparable to a Monster Truck Rally that would make Mozart wish he could hear again! Here\'s presenting the third edition of the national level Nitro RC Car championship, Fuel RC3.\n\nThe smell of burning rubber and Nitro ethanol, all swirling out together on race tracks with twisted turns, ramps and obstacles; it’s an opportunity for all racing enthusiasts to participate and witness exhilarating speeds, stunts and guaranteed high adrenaline action!\n\n</item>
-        <item>Day : 10th October\nTime : 4 PM to 10 PM\nLocation : Block 13 Stretch\n\n</item>
-        <item>Day : 11th October\nTime : All Day\nLocation : MIT Quadrangle\n\n</item>
-        <item>Contact Details\nName : Ranbir Grewal\nPhone : +919008772528\nName : Rohan Maity\nPhone : +919008756610</item>
-    </string-array>
-    <string-array name="fe5">
-        <item>Questionable Intelligence</item>
-        <item>A science and technology Quiz designed to test participants\' knowledge relating to the latest developments in Technology along with all things Science. Teams answer a series of questions spread over 2 rounds to be crowned winners.\n\n</item>
-        <item>Day: 10th October\nTime: 1:30 PM to 3 PM\nLocation : AC Seminar Hall (AB2)\n\n</item>
-        <item>Name : Akhilesh Oberoi\nPhone : +919740446188\nName : Kunal Aggarwal\nPhone : +919740442573</item>
-    </string-array>
-    <string-array name="fe6">
-        <item>The Manipal Conclave</item>
-        <item>The Manipal Conclave is MIT\'s initiative to bring together the most brilliant and cutting-edge minds from all disciplines that impact the world today. Spread over the last 2 days of the fest, the Conclave promises to be the absolute platform to get inspired and learn from the best. The Manipal Conclave 2014, our most treasured event this TechTatva, is a direct reflection of our theme \'Integrating Ideas\'\n\n</item>
-        <item>Day : 11th October\nTime : 4 PM to 10 PM\nLocation : Library Auditorium\n\n</item>
-        <item>Day : 12th October\nTime : 10 AM to 1 PM and 4 PM to 6 PM\nLocation : Library Auditorium\n\n</item>
-        <item>Contact Details\nName : Jal Panchal\nPhone : +919740981697</item>
-    </string-array>
-
-    <string name="the_manipal_conclave">The Manipal Conclave</string>
-
+    <string name="title_activity_favourites">Favourites</string>
+    <string name="title_activity_about_us">About TechTatva</string>
+    <string name="title_activity_developer">DeveloperActivity</string>
+    <string name="noevent">No Event Found!</string>
+    <string name="title_activity_developer_detail">TechTatva\'15 Developers</string>
+    <string name="title_activity_easter_egg">Easter Egg</string>
 </resources>

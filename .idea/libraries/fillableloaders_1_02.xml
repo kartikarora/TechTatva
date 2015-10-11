@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="fillableloaders-1.02">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/techtatva/build/intermediates/exploded-aar/com.github.jorgecastilloprz/fillableloaders/1.02/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/techtatva/build/intermediates/exploded-aar/com.github.jorgecastilloprz/fillableloaders/1.02/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jorgecastilloprz/fillableloaders/1.02/286d620ba32e983c7b72b53c77cd0fe0f736da9e/fillableloaders-1.02-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

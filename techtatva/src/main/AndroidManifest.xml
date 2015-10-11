@@ -1,21 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="chipset.techtatva"
-    android:screenOrientation="portrait">
+    package="chipset.techtatva">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
+        android:name=".applications.InitApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.SplashActivity"
-            android:icon="@drawable/ic_launcher"
+            android:name=".activities.EventActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".activities.ResultActivity"
+            android:label="@string/title_activity_result"
+            android:parentActivityName=".activities.EventActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="chipset.techtatva.activities.EventActivity" />
+        </activity>
+        <activity
+            android:name=".activities.RobowarsResultActivity"
+            android:label="@string/title_activity_robo_result"
+            android:parentActivityName=".activities.ResultActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="chipset.techtatva.activities.ResultActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ImageActivity"
+            android:label="@string/title_activity_image"
+            android:parentActivityName=".activities.InstaFeedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BlackTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="chipset.techtatva.activities.InstaFeedActivity" />
+        </activity>
+        <activity
+            android:name=".activities.InstaFeedActivity"
+            android:label="@string/title_activity_insta_feed"
+            android:parentActivityName=".activities.EventActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="chipset.techtatva.activities.EventActivity" />
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="647d32f2b260516e8c12a0de2e018969f0be79f4" />
+
+        <activity
+            android:name=".activities.FavouritesActivity"
+            android:label="@string/title_activity_favourites"
+            android:parentActivityName=".activities.EventActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="chipset.techtatva.activities.EventActivity" />
+        </activity>
+        <activity
+            android:name=".activities.AboutUsActivity"
+            android:label="@string/title_activity_about_us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,40 +98,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.EventsActivity"
-            android:icon="@drawable/ic_launch"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activities.HomeActivity"
-            android:icon="@drawable/ic_launch"
-            android:label="@string/title_activity_home"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activities.WebViewActivity"
-            android:icon="@drawable/ic_launch"
-            android:label="@string/title_activity_web_view"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activities.ResultActivity"
-            android:icon="@drawable/ic_launch"
-            android:label="@string/title_activity_result"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".activities.DeveloperActivity"
-            android:icon="@drawable/ic_launch"
             android:label="@string/title_activity_developer"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
         <activity
-            android:name=".activities.InstaFeedActivity"
-            android:icon="@drawable/ic_launch"
-            android:label="@string/title_activity_insta_feed"
-            android:screenOrientation="portrait" />
+            android:name=".activities.DeveloperDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTheme" />
         <activity
-            android:name=".activities.FeaturedEventsActivity"
-            android:icon="@drawable/ic_launch"
-            android:label="@string/title_activity_featured_events"
-            android:screenOrientation="portrait" />
+            android:name=".activities.EasterEggActivity"
+            android:label="@string/title_activity_easter_egg"
+            android:parentActivityName=".activities.DeveloperActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BlackTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="chipset.techtatva.activities.DeveloperActivity" />
+        </activity>
+        <activity
+            android:name=".activities.FoodStallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogTheme" />
     </application>
 
 </manifest>

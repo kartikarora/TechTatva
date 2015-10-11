@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/abc_search_hint"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/action_insta"
+        android:icon="@drawable/ic_insta"
+        android:title="@string/instafeed"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_favourites"
+        android:orderInCategory="1"
+        android:title="Favourite Events"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_registration"
+        android:orderInCategory="2"
+        android:title="Registration"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_online_events"
+        android:orderInCategory="3"
+        android:title="Online Events"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_results"
+        android:orderInCategory="100"
+        android:title="@string/result"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_about_us"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_developers"
+        android:orderInCategory="100"
+        android:title="@string/developers"
+        app:showAsAction="never" />
+
+</menu>

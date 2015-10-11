@@ -1,24 +1,31 @@
-<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/resultSwipe"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sorte">
+    android:orientation="vertical">
 
-    <include layout="@layout/toolbar_rest" />
-
-    <ProgressBar
-        android:id="@+id/pBarTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center" />
-
-    <ListView
-        android:id="@+id/result_list"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_r"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="@dimen/activity_vertical_margin"
-        android:padding="@dimen/activity_horizontal_margin" />
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-</android.support.v4.widget.SwipeRefreshLayout>
+    <chipset.techtatva.resources.SwipeDownRefreshLayout
+        android:id="@+id/result_swipe_refresh"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@+id/Result_ListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="6dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="6dp" />
+    </chipset.techtatva.resources.SwipeDownRefreshLayout>
+</LinearLayout>

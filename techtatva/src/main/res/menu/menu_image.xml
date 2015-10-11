@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_save_image"
+        android:icon="@drawable/ic_action_content_save"
+        android:title="@string/action_image_save"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_image_share"
+        android:icon="@drawable/ic_action_share_image"
+        android:title="@string/action_image_share"
+        app:showAsAction="always" />
+</menu>
