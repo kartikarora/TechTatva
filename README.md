@@ -1,6 +1,6 @@
 # Techtatva'15
 
-Official android app for the annual technical fest "Techtatva'15" of Manipal Institute of Technology, Manipal, India.
+Official android app for the annual technical fest "Techtatva'15" of Manipal Institute of Technology, Manipal, India. Download the [APK](https://github.com/chipset95/TechTatva/releases/latest)
 
 Features:
 ==
@@ -20,7 +20,7 @@ The app uses:
 * [Crashlytics](https://www.crashlytics.com/) by [Fabric](https://fabric.io/) for crash analysis 
 * [Potato Library](https://github.com/chipset95/Potato-Library) by [Chipset](https://github.com/chipset95/)
 * [Android Fillable Loaders](https://github.com/JorgeCastilloPrz/AndroidFillableLoaders) by [Jorge Castillo](https://github.com/JorgeCastilloPrz) for the splash screen
-* [Konami Code](http://kimo.io/2015/07/26/konami-code/) by [Thiago Rocha](https://github.com/thiagokimo)
+* [Konami Code](http://kimo.io/2015/07/26/konami-code/) by [Thiago Rocha](https://github.com/thiagokimo) for the easter egg
 * Instagram API for #techtatva15
 * ListView with CustomListViewAdapters
 * RecyclerView with CustomRecyclerViewAdapter
@@ -34,3 +34,6 @@ Contributors:
 * [Kartik Arora](https://github.com/chipset95/)
 
 [![Get the app from playstore](https://developer.android.com/images/brand/en_app_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=chipset.techtatva)
+
+
+P.S There is a eater egg in this app. We hope you like it :)
